@@ -224,3 +224,63 @@ for name, address, interest in persons:
 ```
 
 - 각 변수에 이름을 붙여서, 좀 더 보기 좋게 정리할 수 있다. 
+
+## 딕셔너리 + 루프 
+
+```py
+person = {'name':'Hebu', 'address': 'Seoul', 'interest': 'vrchat'}
+```
+
+- 딕셔너리의 기본 자료형 
+
+```py
+person = {'name':'Hebu', 'address': 'Seoul', 'interest': 'vrchat'}
+print(person['name'])
+
+for key in person:
+    print(key, person[key])
+```
+
+- 딕셔너리에서 for 문으로 key당 데이터를 꺼내기. 
+
+```py
+persons = [
+    {'name':'Hebu', 'address': 'Seoul', 'interest': 'vrchat'},
+    {'name':'Heaven', 'address': 'nowhere', 'interest': 'dream'},
+    {'name':'HeaveKK', 'address': 'tokyo', 'interest': 'artist'}
+]
+
+
+for person in persons:
+    for key in person:
+        print(key, ':', person[key])
+    print('-------------')
+```
+
+- 딕셔너리 자료형에서 for 문으로 한 객체를 꺼내고, 그 다음 객체의 데이터를 key를 활용하여 보기 좋게 정리하기. 
+
+
+## 중첩 조건문 추가 배운 점
+```py
+if input_id == 'Hebu' and input_password == '1234':
+    print('welcome')
+```
+
+- and를 통해서, 중첩된 조건문을 하나로 합칠 수 있다. 
+
+```py
+if input_id == 'hebu' or input_id == 'HeaveKK':
+    print('welcome')
+```
+
+- or을 통해서, 중첩된 조건문을 하나로 합칠 수 있다.
+- and, or **논리연산자** 를 이용해서, 복잡한 로직을 간단하게 표현할 수 있다. 
+
+
+# 배운 점 
+
+- Boolean을 익혔다. 
+- 조건문을 사용하는 방법을 익혔다. 
+- 반복문을 사용하는 방법을 익혔다. 
+- 리스트, 딕셔너리 자료형을 더 명확하게 활용하는 방법을 배우게 되었다. 
+

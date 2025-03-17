@@ -16,5 +16,6 @@
 - [Python3 모듈과 패키지](./PYTHON_STUDY/PYTHON3_MODULE_PAKAGE/module&pakage.md)
 ## Python3 - 함수 (2025.03.17 시작) (2025.03.17 완료)
 - [Python3 함수](./PYTHON_STUDY/PYTHON3_FUNCTION/PYTHON3_FUNCTION.md)
-## Python3 - 제어문 (2025.03.17 시작) 
+## Python3 - 제어문 (2025.03.17 시작) (2025.03.17 완료)
 - [Python3 제어문](./PYTHON_STUDY/PYTHON_FLOW_CONTROL/PYTHON_FLOW_CONTROL.md)
+
