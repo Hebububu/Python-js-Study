@@ -11,6 +11,8 @@
 # PYTHON 3 수업
 
 ## Python3 - 파이썬 기초 수업 (2025.03.07 시작) (2025.03.17 완료)
-- [Python3 기초 수업](./PYTHON3/10.%20수업을%20마치며/10.%20end%20of%20class.md) 
+- [Python3 기초 수업](./PYTHON_STUDY/PYTHON3/10.%20수업을%20마치며/10.%20end%20of%20class.md) 
 ## Python3 - 모듈과 패키지 (2025.03.17 시작) (2025.03.17 완료)
-- [Python3 모듈과 패키지](./PYTHON3_MODULE_PAKAGE/module&pakage.md)
+- [Python3 모듈과 패키지](./PYTHON_STUDY/PYTHON3_MODULE_PAKAGE/module&pakage.md)
+## Python3 - 함수 (2025.03.17 시작) (2025.03.17 완료)
+- [Python3 함수](./PYTHON_STUDY/PYTHON3_FUNCTION/PYTHON3_FUNCTION.md)
