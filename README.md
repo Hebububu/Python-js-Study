@@ -6,7 +6,12 @@
 - 부족한 점이 많음을 인정하자. 배울 것이 많은 점은 좋은 것이다. 
 - 내 문제를 스스로 검색하여 해결해가는 과정은 짜릿하고 즐겁다. 즐기자!
 
+# 웹 수업
+
 ## WEB1 (2025.03.14 시작)
+- [WEB1 - Html](/WEB_STUDY/WEB1%20-%20HTML/HTML.md)
+## WEB2 (2025.03.17 시작)
+- [WEB2 - Javascript](./WEB_STUDY/WEB2%20-%20Javascript/Javascript.md)
 
 # PYTHON 3 수업
 
