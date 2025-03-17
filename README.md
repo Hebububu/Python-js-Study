@@ -8,5 +8,6 @@
 # PYTHON 3 수업
 
 ## Python3 - 파이썬 기초 수업 (2025.03.07 시작) (2025.03.17 완료)
-- [Python3 기초 수업] (PYTHON3\class\10. 수업을 마치며\10. end of class.md) 
+- [Python3 기초 수업](./PYTHON3/class/10.%20수업을%20마치며/10.%20end%20of%20class.md) 
 ## Python3 - 모듈과 패키지 (2025.03.17 시작) (2025.03.17 완료)
+- [Python3 모듈과 패키지](./PYTHON3_MODULE_PAKAGE/class/module&pakage.md)
