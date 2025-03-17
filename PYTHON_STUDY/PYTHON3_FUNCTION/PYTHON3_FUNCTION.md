@@ -44,7 +44,7 @@ def get_vat(price, vat_rate = 0.1):
 get_vat(20000)
 ```
 
-- 내가 사용할 매개변수를 미리 지정할 수도 있음.
+- 내가 사용할 매개변수의 값을 미리 지정할 수도 있음.
 
 ```py
 def get_vat(price, vat_rate=0.1):
