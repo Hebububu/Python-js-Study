@@ -182,3 +182,45 @@ else:
 ```
 
 - id와 비밀번호를 비교하는 중첩 조건문이다.
+
+
+## 반복문 for 
+```py
+names = ['Hebu', 'HeaveKK', 'Heaven']
+
+for name in names:
+    print('hi, ' + name + '. Bye, ' + name + '.')
+```
+
+- for [변수명] in 리스트: 형식으로 작성할 수 있다. 리스트를 순환하며 [변수명]에 하나씩 할당하며 반복되는 반복문 for 이다.
+
+## 다차원 리스트 
+
+```py
+lists = [
+    ['hebu', 'seoul', 'vrchat'],
+    ['heavekk', 'tokyo', 'artist'],
+    ['heaven', 'nowhere', 'dream']
+]
+```
+
+- 복잡하게 얽혀있는, 많은 정보가 담긴 리스트 자료형도 존재할 수 있다. (리스트 안에 리스트가 있는 경우.)
+
+```py
+for list in lists:
+    print(list[0]+','+list[1]+','+list[2])
+```
+
+- 각 리스트의 1, 2 ,3 번째 요소를 출력
+
+```py
+persons = [
+    ['hebu', 'seoul', 'vrchat'],
+    ['heavekk', 'busan', 'game']
+]
+
+for name, address, interest in persons:
+    print(name+','+address+','+interest)
+```
+
+- 각 변수에 이름을 붙여서, 좀 더 보기 좋게 정리할 수 있다. 
