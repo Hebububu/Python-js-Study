@@ -135,9 +135,117 @@ alert("어쩌구저쩌구머시기저시기" + name + "어쩌구저쩌구머시�
 - onclick -> body 태그 선택 -> css 스타일을 변경 -> 나이트모드 / 다크모드 변환 
 
 ## 자바스크립트는 무엇일까? 돌아보자. 
+
 - javascript는 컴퓨터 언어이면서 동시에 프로그래밍 언어라고 불리운다.
 - 프로그램이라는 말의 중심에는 순서라는 말이 중점적으로 강조되어 있다. 
 - 그 순서를 만드는 사람을 프로그래머 라고 함.
 
 - 필요에 따라 순서에 따라 여러 기능을 조작하게 하는 것 
 - 시간에 순서에 따라 순차적으로 실행되어야 하는 것을 컴퓨터 프로그래밍 언어의 문법에 맞게 언어로 작성한 것. 
+
+- 조건에 따라서 다른 기능을 실행하거나, 반복되서 실행되는 프로그램도 만들고 싶어짐.
+- 복잡하게 된 순서를 깔끔하게 정리정돈 하는 기능도 만들고 싶어짐. 
+
+## Javascrpt의 조건문
+
+- 토글로 구현해볼까? (문제점을 찾고, 해결하자)
+
+### Boolean 데이터 타입
+- 다른 언어와 마찬가지로 True, False로 구분된다.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Comparison operators & Boolean</h1>
+        <h2>===</h2>
+        <h3>1===1</h3>
+        <script>
+            document.write(1===1); // 비교 연산자, 동등함을 비교.
+        </script>
+
+        <h3>1===2</h3>
+        <script>
+            document.write(1===2);
+        </script>
+
+        <h3>1&lt;2</h3>
+        <script>
+            document.write(1<2); // 비교 연산자, 크고 작음을 비교함.
+        </script>
+
+        <h3>1&lt;1</h3>
+        <script>
+            document.write(1<1);
+        </script>
+    </body>
+</html>
+```
+
+- Boolean 타입에 대해 간단히 예시를 통해 알아보았다. 
+
+## 조건문의 기본 형식
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Conditional statements</h1>
+        <h2>Program</h2>
+        <script>
+            document.write("1<br>");
+            document.write("2<br>");
+            document.write("3<br>");
+            document.write("4<br>");
+            document.write("5<br>");
+        </script>
+        <h2>if-true</h2>
+        <script>
+            if(true){ // Boolean의 값이 true
+                document.write("1<br>");
+            }
+            else {
+                document.write("2<br>");
+            }
+            document.write("3<br>");
+            document.write("4<br>");
+            document.write("5<br>");
+        </script>
+
+        <h2>if-false</h2>
+        <script>
+            if(false){ // Boolean의 값이 False
+                document.write("1<br>");
+            }
+            else {
+                document.write("2<br>");
+            }
+            document.write("3<br>");
+            document.write("4<br>");
+            document.write("5<br>");
+        </script>
+    </body>
+</html>
+```
+
+- 조건문의 기본 형식에 대해서 알아보았다.
+
+```html
+<script>
+  if('Boolean 값'){
+    'javascript 내용'
+  }
+  else{
+    'javascript 내용'
+  }
+</script>
+```
+
+- 이러한 형식으로 사용되며, 'Boolean 값'이 True 인 경우 if가 실행되고, False인 경우, else를 실행하게끔 되어있다. 
