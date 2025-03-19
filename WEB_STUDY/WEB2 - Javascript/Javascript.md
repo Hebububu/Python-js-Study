@@ -478,7 +478,8 @@ alert("어쩌구저쩌구머시기저시기" + name + "어쩌구저쩌구머시�
 </html>
 ```
 
-집중할만한 부분
+- 집중할만한 부분
+
 ```html
 <input type="button" value ="Night" onClick="
 
@@ -519,4 +520,82 @@ alert("어쩌구저쩌구머시기저시기" + name + "어쩌구저쩌구머시�
 - 변수 alist를 선언하고 a 태그를 전부 선택했다. (querySelectorAll)
 - 변수 i가 alist의 길이보다 작을때까지, alist[i]의 값을 blue나 powderblue로 변경하는 코드를 작성했다. 
 - 활용에 대해서 직접적으로 배운 계기가 된 것 같다. 
+
+## 함수 (Funtion)
+
+```js
+function nightDayHandler(self){
+  var target = document.querySelector('body')
+
+  if (self.value === 'Night'){
+    target.style.backgroundColor= 'black';
+    target.style.color = 'white';
+    self.value = 'Day'
+  
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+  
+    while (i < alist.length){
+    alist[i].style.color = 'powderblue';
+    i = i + 1
+    }
+  } 
+
+  else {
+  target.style.backgroundColor= 'white';
+  target.style.color= 'black';
+  self.value = 'Night'
+
+  var alist = document.querySelectorAll('a');
+  var i = 0;
+
+  while (i < alist.length){
+  alist[i].style.color = 'blue';
+  i = i + 1
+    }
+  }
+}
+```
+
+- function에 담은 기능을 사용하기.
+
+## js 함수의 이론적 정리
+
+- 함수를 정의하고 꺼내서 쓸 수 있다. 
+
+```js
+function functionname(){
+    ...
+}
+
+functionname()
+```
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body style="background-color: black; color: white;">
+        <h1>Function</h1>
+        <h2>Basic</h2>
+        <ul>
+            <script>
+                function two(){
+                    document.write('<li>2-1</li>')
+                    document.write('<li>2-2</li>')
+                }
+                document.write('<li>1</li>')
+                two()
+                document.write('<li>3</li>')
+            </script>
+        </ul>
+        <h2>Parameter & Argument</h2>
+        <h2>Return</h2>
+    </body>
+</html>
+```
+
+- 실제로 적용해 본 사례 
 
