@@ -307,3 +307,216 @@ alert("어쩌구저쩌구머시기저시기" + name + "어쩌구저쩌구머시�
 ```
 
 - var target = document.querySelector('body') 변수를 선언함으로써, 반복된 코드를 줄이고 가독성이 더 좋아졌다!
+
+
+## 반복문을 위한 배열
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Array</h1>
+        <h2>Syntax</h2>
+        <script>
+            var names = ["Hebu", "Heaven"];
+        </script>
+
+        <h2>get</h2>
+        <script>
+            document.write(names[0]);
+            document.write(names[1]);
+        </script>
+
+        <h2>add</h2>
+        <script>
+            names.push('Heavekk')
+        </script>
+
+        <h2>count</h2>
+        <script>
+            document.write(names.length);
+        </script>
+        
+    </body>
+</html>
+```
+
+- 데이터들을 담기 위한 수납 상자라고 생각하자.
+- 변수에 담고 변수명[0] 등을 이용해서 사용할 수 있다.
+- .push를 통해 배열에 새로운 값을 추가할 수 있다.
+- .length를 통해 배열의 길이를 찾을 수 있다. 
+
+## 반복문 while 기초
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+        <h1>Loop</h1>
+        <ul>
+            <script>
+                document.write('<li>1</li>');
+                var i = 0;
+                while(i < 3){
+                    document.write('<li>2</li>');
+                    document.write('<li>3</li>');
+                    i = i + 1;
+                }
+                document.write('<li>4</li>');
+            </script>
+        </ul>
+    </body>
+</html>
+```
+
+- while 반복문
+- i라는 변수를 0으로 선언, while(i < 3) 일때, 리스트 2,3 을 반복 작성
+- 완료될때 i의 값에 +1 을 더함 
+- 최종적으로 i가 3이 되면 반복문이 종료됨. 
+
+## 배열과 반복문
+- 배열은 예쁘게 데이터를 차곡차곡 담는 것
+- 반복문은 그 데이터를 차곡차곡 꺼내서 사용하는 것
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+        <h1>Loop & Array</h1>
+        <script>
+            var coworkers= ['Hebu', 'Heaven', 'HeaveKK', 'Hebububu']
+        </script>
+        <h2>Co workers</h2>
+        <ul>
+            <script>
+                var i = 0;
+                while(i < coworkers.length){
+                    document.write('<li>'+coworkers[i]+'</li>');
+                    i = i + 1;
+                }
+            </script>
+        </ul>
+    </body>
+</html>
+```
+
+- while(i < coworkers.length)에 집중..
+- 변수 i 는 인덱스 순서와 같기 때문에 사용하기 편하구나.
+
+## 배열과 반복문의 활용
+
+```html
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - JavaScript</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+  <input type="button" value ="Night" onclick="
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  ">
+  <input type="button" value ="Day" onclick="
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  ">
+  <input type="button" value ="Night" onClick="
+
+  var target = document.querySelector('body')
+
+  if (this.value === 'Night'){
+    target.style.backgroundColor= 'black';
+    target.style.color = 'white';
+    this.value = 'Day'
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+
+    while (i < alist.length){
+    alist[i].style.color = 'powderblue';
+    i = i + 1
+}
+
+
+  } else {
+    target.style.backgroundColor= 'white';
+    target.style.color= 'black';
+    this.value = 'Night'
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+
+    while (i < alist.length){
+    alist[i].style.color = 'blue';
+    i = i + 1
+    }
+  }
+
+  ">
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <h2>JavaScript</h2>
+  <p>
+    JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+  </p>
+</body>
+</html>
+```
+
+집중할만한 부분
+```html
+<input type="button" value ="Night" onClick="
+
+  var target = document.querySelector('body')
+
+  if (this.value === 'Night'){
+    target.style.backgroundColor= 'black';
+    target.style.color = 'white';
+    this.value = 'Day'
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+
+    while (i < alist.length){
+    alist[i].style.color = 'powderblue';
+    i = i + 1
+}
+
+
+  } else {
+    target.style.backgroundColor= 'white';
+    target.style.color= 'black';
+    this.value = 'Night'
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+
+    while (i < alist.length){
+    alist[i].style.color = 'blue';
+    i = i + 1
+    }
+  }
+
+  ">
+```
+
+- if else 문 사이에 while 문을 넣었다.
+- 변수 alist를 선언하고 a 태그를 전부 선택했다. (querySelectorAll)
+- 변수 i가 alist의 길이보다 작을때까지, alist[i]의 값을 blue나 powderblue로 변경하는 코드를 작성했다. 
+- 활용에 대해서 직접적으로 배운 계기가 된 것 같다. 
+
