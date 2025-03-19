@@ -249,3 +249,61 @@ alert("어쩌구저쩌구머시기저시기" + name + "어쩌구저쩌구머시�
 ```
 
 - 이러한 형식으로 사용되며, 'Boolean 값'이 True 인 경우 if가 실행되고, False인 경우, else를 실행하게끔 되어있다. 
+
+```html
+  <input id="night_day" type="button" value="Night" onClick="
+  if (document.querySelector('#night_day').value === 'Night'){
+    document.querySelector('body').style.backgroundColor= 'black';
+    document.querySelector('body').style.color = 'white';
+    document.querySelector('#night_day').value = 'Day'
+  } else {
+    document.querySelector('body').style.backgroundColor= 'white';
+    document.querySelector('body').style.color= 'black';
+    document.querySelector('#night_day').value = 'Night'
+  }
+  ">
+```
+
+1. input 의 id값이 night_day 인 요소를 querySelector로 찾기. 
+2. 그 value가 Night인 경우 나이트 모드를 활성화하고, value를 Day로 대체하기.
+
+- Day일때는 else 문이 작동하여 반대로 데이모드가 작동된다.
+- 신기하고 재밌다!
+
+## 리팩토링이란?
+
+- 좀 더 개선한다. 로 이해하면 좋을 것 같은 용어 
+- 비효율적인 코드, 반복적인 코드를 아주 효율적으로 만들고, 가독성을 높이면서 유지보수 하기 편하게 하는 것!
+
+```html
+  <input type="button" value ="Night" onClick="
+  if (this.value === 'Night'){
+    document.querySelector('body').style.backgroundColor= 'black';
+    document.querySelector('body').style.color = 'white';
+    this.value = 'Day'
+  } else {
+    document.querySelector('body').style.backgroundColor= 'white';
+    document.querySelector('body').style.color= 'black';
+    this.value = 'Night'
+  }
+  ">
+```
+
+- 자기 자신, 스스로를 가르키고 있는 쿼리셀렉터를 지우고 'this'로 대체함으로써 가독성이 좋아지고, 재사용성 또한 좋아졌다.
+
+```html
+  <input type="button" value ="Night" onClick="
+  var target = document.querySelector('body')
+  if (this.value === 'Night'){
+    target.style.backgroundColor= 'black';
+    target.style.color = 'white';
+    this.value = 'Day'
+  } else {
+    target.style.backgroundColor= 'white';
+    target.style.color= 'black';
+    this.value = 'Night'
+  }
+  ">
+```
+
+- var target = document.querySelector('body') 변수를 선언함으로써, 반복된 코드를 줄이고 가독성이 더 좋아졌다!
