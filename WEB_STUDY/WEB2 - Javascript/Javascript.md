@@ -751,3 +751,131 @@ var object = {
 
 - 예시로 간단한 객체를 만들어서 사용해보았다.
 - 추가하는 객체 중 띄어쓰기가 있어 문법적으로 오류가 있는 경우, 대괄호를 써서 해결할 수 있다.
+
+
+## 객체와 반복문
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var coworkers = {
+                "nickname": "Hebu",
+                "heart": "Heaven"
+            }
+            document.write("nickname : " + coworkers.nickname + "<br>")
+            document.write("heart : " + coworkers.heart + "<br>")
+            coworkers["artist"] = "HeaveKK"
+            document.write("artist: " + coworkers["artist"])
+        </script>
+
+        <h2>iterate</h2>
+        <script>
+            for(var key in coworkers) {
+                document.write(key + " : "+ coworkers[key] + "<br>")
+            }
+        </script>
+    </body>
+</html>
+```
+
+- 객체의 데이터를 순회하는 방법을 배웠다. 
+
+
+## 객체 프로퍼티와 메소드 
+
+- 객체에 소속된 함수를 메소드라고 부른다.
+- 객체에 소속된 변수를 프로퍼티라고 부른다.
+
+```html
+<h2>Property & Method</h2>
+<script>
+    coworkers.showAll = function(){
+        for(var key in this) {
+        document.write(key + " : "+ this[key] + "<br>")
+        }
+    }
+    coworkers.showAll()
+</script>
+```
+
+- 함수를 coworkers 객체에 담았다. 
+
+## 객체의 활용
+
+```html 
+<!doctype html>
+<html>
+  <head>
+    <title>WEB1 - JavaScript</title>
+    <meta charset="utf-8">
+    <script>
+
+      var Links = {
+        setColor: function(color){
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+        
+          while (i < alist.length){
+          alist[i].style.color = color;
+          i = i + 1
+          }
+        }
+      }
+
+      var Body = {
+
+        setColor: function(color){
+          document.querySelector('body').style.color = color
+        },
+        setBackgroundColor: function(color){
+          document.querySelector('body').style.backgroundColor = color
+        }
+      }
+
+      function nightDayHandler(self){
+        var target = document.querySelector('body')
+
+        if (self.value === 'Night'){
+          Body.setBackgroundColor('black')
+          Body.setColor('white')
+          self.value = 'Day'
+        
+          Links.setColor('powderblue')
+        } 
+
+        else {
+          Body.setBackgroundColor('white')
+          Body.setColor('black')
+        self.value = 'Night'
+      
+          Links.setColor('blue')
+          }
+        }
+    </script>
+  </head>
+  <body>
+    <h1><a href="index.html">WEB</a></h1>
+
+    <input type="button" value ="Night" onClick="nightDayHandler(this)">
+    <ol>
+      <li><a href="1.html">HTML</a></li>
+      <li><a href="2.html">CSS</a></li>
+      <li><a href="3.html">JavaScript</a></li>
+    </ol>
+    <h2>JavaScript</h2>
+    <p>
+      JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+    </p>
+  </body>
+</html>
+```
+
+- 원래 만들던 코드에 최종적으로 객체를 추가하여 사용해보았다. 
+- 메소드를 실제로 사용해보았다. 
