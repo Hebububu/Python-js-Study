@@ -715,3 +715,39 @@ function nightDayHandler(self){
 
 ## 객체 (Object)
 
+- 객체에 포함된 함수는 메소드(method) 라고 부른다.
+- Object.method() 식으로 사용이 가능하다. 
+
+- 중괄호로 객체를 만들 수 있다. 
+
+```js
+var object = {
+  "object1": "object2"
+}
+```
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var coworkers = {
+                "nickname": "Hebu",
+                "heart": "Heaven"
+            }
+            document.write("nickname : " + coworkers.nickname + "<br>")
+            document.write("heart : " + coworkers.heart + "<br>")
+            coworkers["artist"] = "HeaveKK"
+            document.write("artist: " + coworkers["artist"])
+        </script>
+    </body>
+</html>
+```
+
+- 예시로 간단한 객체를 만들어서 사용해보았다.
+- 추가하는 객체 중 띄어쓰기가 있어 문법적으로 오류가 있는 경우, 대괄호를 써서 해결할 수 있다.

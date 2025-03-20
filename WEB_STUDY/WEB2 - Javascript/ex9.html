@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            var coworkers = {
+                "nickname": "Hebu",
+                "heart": "Heaven"
+            }
+            document.write("nickname : " + coworkers.nickname + "<br>")
+            document.write("heart : " + coworkers.heart + "<br>")
+            coworkers["artist"] = "HeaveKK"
+            document.write("artist: " + coworkers["artist"])
+        </script>
+
+        <h2>iterate</h2>
+        <script>
+            for(var key in coworkers) {
+                document.write(key + ": "+ coworkers[key] + "<br>")
+            }
+        </script>
+    </body>
+</html>
