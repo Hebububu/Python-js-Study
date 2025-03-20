@@ -599,3 +599,119 @@ functionname()
 
 - 실제로 적용해 본 사례 
 
+## 함수 파라미터, 아규먼트
+
+- 함수는 입력과 출력으로 이루어져 있다.
+- Parameter (매개변수)
+- Argument (인자)
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body style="background-color: black; color: white;">
+        <h1>Function</h1>
+        <h2>Basic</h2>
+        <ul>
+            <script>
+                function two(){
+                    document.write('<li>2-1</li>')
+                    document.write('<li>2-2</li>')
+                }
+                document.write('<li>1</li>')
+                two()
+                document.write('<li>3</li>')
+            </script>
+        </ul>
+        <h2>Parameter & Argument</h2>
+        <script>
+            function oneplusone(){
+                document.write(1+1+'<br>')
+            }
+            oneplusone();
+
+            function sum(a,b){
+                document.write(a + b +'<br>')
+            }
+            sum(2,3); // 5
+            sum(3,4) // 7
+        </script>
+        <h2>Return</h2>
+    </body>
+</html>
+```
+
+- 예제로 알아보았다.
+
+```js
+function sum(a, b) { // 매개변수를 전달
+  document.write(a + b)
+}
+
+sum(3,4) // 인자를 전달
+
+> 7 
+```
+
+- 결과값이 잘 나오는걸 볼 수 있다. 
+
+## return
+
+```js
+function sum2(a,b){
+    return a + b
+}
+document.write(sum2(2,3)+'<br>')
+document.write('<div style="color:red">' + sum2(2,3)+'</div>'+'<br>')
+```
+
+- 함수에 왜 가급적 한개의 기능만 넣는게 좋은지 깨달았다. 
+- 다양한 맥락에서 사용할 수 있는 자유도가 생긴다. 
+
+## 함수의 활용
+
+
+```html
+<input type="button" value ="Night" onClick= "nightDayHandler(this)"> // this는 본인(태그)을 지칭하는 Argument
+```
+
+```js
+function nightDayHandler(self){
+        var target = document.querySelector('body')
+
+        if (self.value === 'Night'){
+          target.style.backgroundColor= 'black';
+          target.style.color = 'white';
+          self.value = 'Day'
+        
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+        
+          while (i < alist.length){
+          alist[i].style.color = 'powderblue';
+          i = i + 1
+          }
+        } 
+
+        else {
+        target.style.backgroundColor= 'white';
+        target.style.color= 'black';
+        self.value = 'Night'
+      
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+      
+        while (i < alist.length){
+        alist[i].style.color = 'blue';
+        i = i + 1
+          }
+        }
+      }
+```
+
+- 매개변수로 인자 this를 제공하고 함수에서는 self 로 받아서 제대로 작동하게끔 수정함. 
+
+## 객체 (Object)
+
