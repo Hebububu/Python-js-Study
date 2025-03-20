@@ -879,3 +879,53 @@ var object = {
 
 - 원래 만들던 코드에 최종적으로 객체를 추가하여 사용해보았다. 
 - 메소드를 실제로 사용해보았다. 
+
+## 파일로 쪼개서 정리 정돈하기
+```html
+<script src = "filename.js">
+```
+
+- 이것을 통해서 깔끔하게 정리할 수 있었다. 
+
+```js
+var Links = {
+    setColor: function(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+    
+      while (i < alist.length){
+      alist[i].style.color = color;
+      i = i + 1
+      }
+    }
+  }
+
+var Body = {
+setColor: function(color){
+    document.querySelector('body').style.color = color
+  },
+  setBackgroundColor: function(color){
+    document.querySelector('body').style.backgroundColor = color
+  }
+}
+
+function nightDayHandler(self){
+var target = document.querySelector('body')
+  if (self.value === 'Night'){
+    Body.setBackgroundColor('black')
+    Body.setColor('white')
+    self.value = 'Day'
+  
+    Links.setColor('powderblue')
+  } 
+  else {
+    Body.setBackgroundColor('white')
+    Body.setColor('black')
+    self.value = 'Night'
+
+    Links.setColor('blue')
+    }
+}
+```
+
+- 코드의 재사용성을 더욱 높혔다. 
