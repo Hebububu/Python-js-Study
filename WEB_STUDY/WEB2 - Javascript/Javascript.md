@@ -929,3 +929,42 @@ var target = document.querySelector('body')
 ```
 
 - 코드의 재사용성을 더욱 높혔다. 
+
+## 라이브러리와 프레임워크 
+
+- 소프트웨어를 혼자서 만드는 경우는 거의 없다. 
+- 누군가가 만든 소프트웨어 위에서 새로운 소프트웨어를 만들고 있다. 
+- 다른사람이 잘 만들어 놓은 부품을 사용해서 새로이 만들어나가는 기본중의 기본. 
+- 생산자가 아닌 소비자가 되는 방법을 배워보자. 
+
+### Libarary와 Framework
+- 내가 만들고자 하는 소프트웨어의 부품들을 재사용하기 쉽도록 정리해놓은 소프트웨어를 Library라고 한다. 
+- 만들고자 하는 것의 부품들을 공통적으로 미리 사용하게 좋게끔 잘 짜여져 있는 블루프린트 같은 것을 Framework라고 한다. 
+
+```js
+var Links = {
+    setColor: function(color){
+      // var alist = document.querySelectorAll('a');
+      // var i = 0;
+    
+      // while (i < alist.length){
+      // alist[i].style.color = color;
+      // i = i + 1
+      // }
+      $('a').css('color', color)
+    }
+  }
+
+var Body = {
+setColor: function(color){
+    // document.querySelector('body').style.color = color
+    $('body').css('color', color)
+  },
+  setBackgroundColor: function(color){
+    // document.querySelector('body').style.backgroundColor = color
+    $('body').css('backgroundColor', color)
+  }
+}
+```
+
+- Jquery를 이용해서 기존의 코드를 더욱 간결하게 수정했다. 
