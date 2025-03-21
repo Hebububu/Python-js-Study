@@ -10,7 +10,7 @@
 
 ## WEB1 (2025.03.14 시작)
 - [WEB1 - Html](/WEB_STUDY/WEB1%20-%20HTML/HTML.md)
-## WEB2 (2025.03.17 시작)
+## WEB2 (2025.03.17 시작) (2025.03.21 완료)
 - [WEB2 - Javascript](./WEB_STUDY/WEB2%20-%20Javascript/Javascript.md)
 
 # PYTHON 3 수업
