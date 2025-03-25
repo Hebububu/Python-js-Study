@@ -13,7 +13,8 @@
 - [BAEKJOON](https://www.acmicpc.net/)
 
 # 초보자를 위한 파이썬 기초 300제
-## PYTHON PROBLEMS 300 [링크](https://wikidocs.net/book/922)
+## PYTHON PROBLEMS 300
+- [문제집 링크](https://wikidocs.net/book/922)
 - [PYTHON_300](./PYTHON_STUDY/PYTHON_300_PROBLEMS/PYTHON_300_PROBLEMS.md)
 
 ***
