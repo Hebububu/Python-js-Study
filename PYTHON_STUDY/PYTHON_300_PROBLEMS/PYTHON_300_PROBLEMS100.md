@@ -315,3 +315,225 @@ print(new_string)
 ```
 
 - 만약 바꾸고 싶다면 이런 방식을 사용해야 할 것. 
+
+## 31번 문자열 합치기
+
+```py
+a = "3"
+b = "4"
+print(a + b)
+
+> 34
+```
+
+- 문자열은 더하면 문자열 값 그대로 더해짐으로 결과값은 34가 나온다.
+
+## 32번 문자열 곱하기
+
+```py
+print("Hi" * 3)
+
+> HiHiHi
+```
+
+- 문자열은 곱하면 문자열 값 그대로 곱해짐으로 결과값이 저렇게 나온다.
+
+## 33번 문자열 곱하기
+
+```py
+print("-" * 80)
+```
+
+- 문자열을 80번 곱하면 되는 간단한 문제.
+
+## 34번 문자열 곱하기
+
+```py
+t1 = 'python'
+t2 = 'java'
+t3 = t1 + ' ' + t2 + ' '
+
+print(t3*4)
+```
+
+- 문자열을 서로 더해서 곱하면 되는 간단한 문제 
+
+## 35번 문자열 출력
+
+```py
+name1 = "김민수"
+age1 = 10
+name2 = "이철희"
+age2 = 13
+
+my_str = "이름: %s 나이: %d"
+print(my_str % (name1, age1))
+print(my_str % (name2, age2))
+```
+
+- % 포맷팅은 실제론 처음 써봤다. 구글에 검색해서 알아봤음
+- %s 문자열, %d 정수, %f 실수 
+
+```py
+print("이름: %s 나이 %d" % (name1, age1))
+```
+
+- 이렇게도 쓸 수 있다. 
+
+## 36번 문자열 출력
+
+```py
+name1 = "김민수"
+age1 = 10
+name2 = "이철희"
+age2 = 13
+
+print("이름: {} 나이: {}".format(name1, age1))
+print("이름: {} 나이: {}".format(name2, age2))
+```
+
+- format() 메서드를 이용한 방식. 
+- 이도 처음 써봐서 구글에 검색했다.
+
+## 37번 문자열 출력
+
+```py
+name1 = "김민수"
+age1 = 10
+name2 = "이철희"
+age2 = 13
+
+print(f"이름: {name1} 나이: {age1}")
+print(f"이름: {name2} 나이: {age2}")
+```
+
+- f-string을 이용한 방식. 
+- 이전에 사용해 본 적 있는 방식이라 익숙하다. 간단한 문제. 
+
+## 38번 컴마 제거하기
+
+```py
+상장주식수 = "5,969,782,550"
+non_comma = 상장주식수.replace(',','')
+type_change = int(non_comma)
+print(type_change, type(type_change))
+```
+
+- 컴마를 제거하는 부분까지는 이해했는데.. 결과값의 숫자가 붙어서 나온다
+- 숫자를 따로 분리하는 부분까지는 설명이 안 되어 있다. 문제의 의도인가?
+
+## 39번 문자열 슬라이싱
+
+```py
+분기 = "2020/03(E) (IFRS연결)"
+print(분기.split('(')[0])
+```
+
+- 나는 split() 메소드를 사용해서 풀었다. 
+- 정답은 print(분기[:7])을 사용하고 있었다. 
+
+## 40번 strip 메서드
+
+```py
+data = "      삼성전자      "
+cleared_data = data.strip()
+print(cleared_data)
+```
+
+- strip() 메서드도 처음 써 본다. 
+- 원하는 문자열과 공백을 전부 제거하는 메소드. 
+- 다른 활용방법도 있다. 
+
+## 41번 upper 메서드
+
+```py
+ticker = "btc_krw"
+print(ticker.upper())
+```
+
+- upper() 메소드를 이용해 문자열을 대문자로 만들기.
+
+## 42번 lower 메서드
+
+```py
+ticker = "BTC_KRW"
+print(ticker.lower())
+```
+
+- lower() 메소드를 이용해 문자열을 소문자로 만들기.
+
+## 43번 capitalize 메소드
+
+```py
+string = "hello"
+print(string.capitalize())
+```
+
+- capitalize() 메소드. 첫 글자를 대문자로 바꾸는 함수이다. 
+
+## 44번 endswith 메소드
+
+```py
+file_name = "보고서.xlsx"
+print(file_name.endswith('xlsx'))
+```
+
+- endswith() 메소드. 무엇으로 끝나는지를 Boolean으로 알려준다. 
+
+## 45번 endswith 메소드
+
+```py
+file_name = "보고서.xlsx"
+print(file_name.endswith(('xlsx','xls')))
+```
+
+- xlsx이나 xls로 끝나는지 확인하라길래 무슨 소린가 했는데 그냥 2개 넣으면 되는거였다.
+- 타입 에러가 났었는데, 두개 넣고 괄호를 안넣었다. ㅋㅋ
+
+## 46번 startswith 메소드
+
+```py
+file_name = "2020_보고서.xlsx"
+print(file_name.startswith("2020"))
+```
+
+- startswith() 메소드
+
+## 47번 split 메소드
+
+```py
+a = "hello world"
+split_a = a.split(" ")
+print(split_a)
+```
+
+- split() 메소드
+
+## 48번 split 메소드
+
+```py
+ticker = "btc_krw"
+split_ticker = ticker.split("_")
+print(split_ticker)
+```
+
+- split() 메소드
+
+## 49번 split 메소드
+
+```py
+date = "2020-05-01"
+split_date = date.split("-")
+print(split_date)
+```
+
+## 50번 rstrip 메소드
+
+```py
+data = "035043       "
+strip_data = data.rstrip()
+print(strip_data)
+```
+
+- rstrip() 메소드. 스트립이랑 거의 같다. 오른쪽이란거 빼고. 
+
