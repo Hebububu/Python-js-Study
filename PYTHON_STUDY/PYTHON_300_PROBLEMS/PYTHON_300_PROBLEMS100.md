@@ -537,3 +537,559 @@ print(strip_data)
 
 - rstrip() 메소드. 스트립이랑 거의 같다. 오른쪽이란거 빼고. 
 
+# 파이썬 리스트
+
+## 51번 리스트 생성
+
+```py
+movie_rank = ["닥터 스트레인지", "스플릿", "럭키"]
+print(movie_rank)
+```
+
+- 기본적인 파이썬 리스트 만드는 방법. 
+
+## 52번 리스트에 원소 추가
+
+```py
+movie_rank = ["닥터 스트레인지", "스플릿", "럭키"]
+movie_rank.append("배트맨")
+print(movie_rank)
+```
+
+- append() 메소드를 이용하여 리스트에 원소를 추가할 수 있다. 
+
+## 53번 
+
+```py
+movie_rank = ["닥터 스트레인지", "스플릿", "럭키", "배트맨"]
+movie_rank.insert(1, "슈퍼맨")
+print(movie_rank)
+```
+
+- insert() 메소드를 사용하면 특정 위치에 값을 끼워넣을 수 있다.
+- insert(인덱스, 원소)
+
+## 54번 
+
+```py
+movie_rank = ["닥터 스트레인지", "슈퍼맨", "스플릿", "럭키", "배트맨"]
+movie_rank.remove("럭키")
+print(movie_rank)
+```
+
+- 답에선 del 키워드를 사용했는데, 난 그냥 remove() 메소드를 사용했다. 
+
+## 55번 
+
+```py
+movie_rank = ["닥터 스트레인지", "슈퍼맨", "스플릿", "럭키", "배트맨"]
+movie_rank.remove("스플릿")
+movie_rank.remove("배트맨")
+print(movie_rank)
+```
+
+- 두번 지우면 됨. 
+
+## 56번 
+
+```py
+lang1 = ["C", "C++", "JAVA"]
+lang2 = ["Python","Go","C#"]
+
+combined_lang = lang1 + lang2
+print(combined_lang)
+```
+
+- 리스트끼리 더하기.
+
+## 57번
+
+```py
+nums = [1, 2, 3, 4, 5, 6, 7]
+print(f"max: {max(nums)}")
+print(f"min: {min(nums)}")
+```
+
+- max()와 min() 메서드로 최솟값과 최댓값을 출력하기. 
+
+## 58번
+
+```py
+nums = [1, 2, 3, 4, 5]
+total = 0
+
+for num in nums:
+    total += num
+
+print(total)
+```
+
+- 나는 for 문을 쓰긴 했다. 정답에서는 그냥 sum()을 썼다
+
+```py
+nums = [1, 2, 3, 4, 5]
+print(sum(nums))
+```
+
+## 59번
+
+```py
+cook = ["피자", "김밥", "만두", "양념치킨", "족발", "피자", "김치만두", "쫄면", "소시지", "라면", "팥빙수", "김치전"]
+print(len(cook))
+```
+
+## 60번
+
+```py
+nums = [1, 2, 3, 4, 5]
+import statistics 
+print(statistics.mean(nums))
+```
+
+- statistics 모듈을 임포트해서 mean() 메소드로 풀었다. 
+- 정답에서는 sum() / len() 으로 풀더라. 
+
+```py
+nums = [1, 2, 3, 4, 5]
+avg = sum(nums) / len(nums)
+print(avg)
+```
+
+## 61번
+
+```py
+price = ['20180728', 100, 130, 140, 150, 160, 170]
+print(price[1:])
+```
+
+- 슬라이싱을 통한 가격 리스트 값 구하기
+
+## 62번
+
+```py
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(nums[::2])
+```
+
+- 슬라이싱을 통한 홀수만 출력하기
+
+
+## 63번 
+
+```py
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(nums[1::2])
+```
+
+- 슬라이싱을 통한 짝수만 출력하기
+
+## 64번 
+
+```py
+nums = [1, 2, 3, 4, 5]
+print(nums[::-1])
+```
+
+- 슬라이싱을 통한 역순 출력하기
+
+## 65번
+
+```py
+interest = ["삼성전자", "LG전자", "Naver"]
+print(interest[0],interest[2])
+```
+
+- 인덱싱으로 특정 데이터 출력하기
+
+## 66번 join 매소소드
+
+```py
+interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
+result = " ".join(interest)
+print(result)
+```
+
+- join 메서드. 매개변수로 들어온 리스트에 있는 요소 하나하나를 합쳐서 하나의 문자열로 바꾸어 반환하는 함수. 
+- 구분자.join(매개변수) 식으로 사용이 가능하다. 
+
+## 67번 join 메소드
+
+```py
+interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
+print("/".join(interest))
+```
+
+- 구분자를 바꿔서 사용해보기. 
+
+## 68번 join 메소드
+
+```py
+interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
+print("\n".join(interest))
+```
+
+- \n 줄바꿈 
+
+## 69번 문자열 split 메소드
+
+```py
+string = "삼성전자/LG전자/Naver"
+interest = string.split("/")
+print(interest)
+```
+
+- split() 메소드 사용해보기. 
+
+## 70번 리스트 정렬
+
+```py
+data = [2, 4, 3, 1, 5, 10, 9]
+data.sort()
+print(data)
+```
+
+- sort() 메소드 사용하기.
+
+# 파이썬 튜플
+
+## 71번 
+
+```py
+my_variable = ()
+print(type(my_variable))
+```
+
+- 튜플을 정의하는 기호는 괄호. 
+
+## 72번
+
+```py
+movie_rank = ("닥터 스트레인지", "스플릿", "럭키")
+```
+
+- 튜플 만들어보기 
+
+## 73번 
+
+```py
+num = (1,)
+```
+
+- 하나의 데이터만 저장되는 경우, 쉼표로 튜플임을 알려주어야 함. 
+
+## 74번
+
+```py
+>> t = (1, 2, 3)
+>> t[0] = 'a'
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    t[0] = 'a'
+TypeError: 'tuple' object does not support item assignment
+```
+
+- 오류가 일어나는 이유
+- 튜플은 원소의 값을 변경할 수 없다. 
+
+## 75번
+
+```py
+t = 1, 2, 3, 4
+```
+
+- 괄호 없이도 튜플은 동작한다. 
+
+## 76번
+
+```py
+t = ('a', 'b', 'c')
+t = ('A', 'b', 'c')
+```
+
+- 튜플은 값이 변경될 수 없음으로 변수를 새로 선언해야 한다. 
+
+## 77번
+
+```py
+interest = ('삼성전자', 'LG전자', 'SK Hynix')
+data = list(interest)
+```
+
+- 튜플을 리스트 자료형으로 변경하기. 
+
+## 78번
+
+```py
+interest = ["삼성전자", "LG전자", "SK Hynix"]
+data = tuple(interest)
+```
+
+- 리스트를 튜플 자료형으로 변경하기.
+
+## 79번 튜플 언팩킹
+
+```py
+temp = ('apple', 'banana', 'cake')
+a, b, c = temp
+print(a, b, c)
+```
+
+- 튜플의 왼쪽에 각 튜플의 원소를 바인딩할 변수를 적어주면 각 변수가 튜플의 원소를 바인딩하게 된다.
+- 이를 튜플 언팩킹이라고 한다. 하나씩 인덱싱 할 필요가 없어서 편하다. 
+
+## 80번 range 함수
+
+```py
+numbers = tuple(range(2,100,2))
+print(numbers)
+```
+
+- range() 함수도 마찬가지로 start, stop, step 을 인자로 받는다. 
+- 2부터 시작해서 100에서 멈추고 2마다 건너뛴다. 로 짝수만 출력하게 했다. 
+
+# 파이썬 딕셔너리 
+
+## 81번 별 표현식
+
+```py
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+*valid_score, b, c = tuple(scores)
+print(a, b, c)
+```
+
+- 위에서 배웠던 튜플 언팩킹으로 왼쪽 8개의 값을 valid_score 리스트에 담았다. 
+
+```py
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+*valid_score, _, _= scores
+print(valid_score)
+```
+
+- 정답에선 이렇게 했던데, _ 변수가 궁금해서 알아봤다.
+- _ 변수도 실제로 값을 저장하고 있지만, 관례적으로 이 값은 사용하지 않겠다는 뜻의 변수로 사용된다고 한다. 
+- 굳이 튜플로 변환하지 않아도 됐었다.. ㅋㅋㅋ
+
+## 82번 
+
+```py
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+_, _, *valid_score = scores
+print(valid_score)
+```
+
+- 오른쪽 8개 값을 언팩킹하기
+
+## 83번
+
+```py
+scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
+_, *valid_score, _ = scores
+print(valid_score)
+```
+
+- 마찬가지로 중간 값을 언팩킹하기 
+
+## 84번
+
+```py
+temp = {}
+```
+
+- 빈 딕셔너리 만들기. 기본
+
+## 85번
+
+```py
+icecream = {
+  "메로나" : 1000,
+  "폴라포" : 1200,
+  "빵빠레" : 1800
+}
+```
+
+- 딕셔너리 만들기
+
+## 86번
+
+```py
+icecream = {
+  "메로나" : 1000,
+  "폴라포" : 1200,
+  "빵빠레" : 1800
+}
+icecream['죠스바'] = 1200
+icecream['월드콘'] = 1500
+
+print(icecream)
+```
+
+- 딕셔너리에서는 append나 inser같은 메서드를 지원하지 않는다. 
+- 따라서 딕셔너리에 데이터를 삽입하기 위해서는 명시적으로 key - value 쌍을 넣어서 데이터를 삽입하는 방법을 사용한다. 
+
+## 87번
+
+```py
+ice = {'메로나': 1000,
+       '폴로포': 1200,
+       '빵빠레': 1800,
+       '죠스바': 1200,
+       '월드콘': 1500}
+
+print(f"메로나 가격: {ice['메로나']}")
+```
+
+- 딕셔너리를 인덱싱할때는, 인덱스로 key를 이용하여 인덱싱한다. 
+
+## 88번
+
+```py
+ice = {'메로나': 1000,
+       '폴로포': 1200,
+       '빵빠레': 1800,
+       '죠스바': 1200,
+       '월드콘': 1500}
+
+ice['메로나'] = 1300
+
+print(f"메로나 가격: {ice['메로나']}")
+```
+
+- 값 수정도 마찬가지로 인덱스로 key를 이용하면 된다. 
+
+## 89번 
+
+```py
+ice = {'메로나': 1000,
+       '폴로포': 1200,
+       '빵빠레': 1800,
+       '죠스바': 1200,
+       '월드콘': 1500}
+
+del ice['메로나']
+
+print(ice)
+```
+
+- 딕셔너리의 key - value 쌍을 삭제할때는 del 명령어를 사용하면 된다. 
+
+## 90번
+
+```py
+>> icecream = {'폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+>> icecream['누가바']
+Traceback (most recent call last):
+  File "<pyshell#69>", line 1, in <module>
+    icecream['누가바']
+KeyError: '누가바'
+```
+
+- 오류가 발생한 원인..?
+- 누가바라는 Key가 존재하지 않기 때문.
+
+## 91번 
+
+```py
+inventory = {
+  "메로나" : [300, 20],
+  "비비빅" : [400, 3],
+  "죠스바" : [250, 100]
+}
+```
+
+- 딕셔너리 안에 리스트를 넣을 수 있다. 
+
+## 92번 딕셔너리 인덱싱 
+
+```py
+inventory = {
+  "메로나" : [300, 20],
+  "비비빅" : [400, 3],
+  "죠스바" : [250, 100]
+}
+
+print(f"{inventory['메로나'][0]} 원")
+```
+
+## 93번 딕셔너리 인덱싱
+
+```py
+inventory = {
+  "메로나" : [300, 20],
+  "비비빅" : [400, 3],
+  "죠스바" : [250, 100]
+}
+
+print(f"{inventory['메로나'][1]} 개")
+```
+
+## 94번 딕셔너리 추가
+
+```py
+inventory = {
+  "메로나" : [300, 20],
+  "비비빅" : [400, 3],
+  "죠스바" : [250, 100]
+}
+inventory['월드콘'] = [500,7]
+print(inventory)
+```
+
+- 뭐 똑같다. key - value 로 넣되 value가 리스트 타입으로 바뀌었을 뿐.
+
+## 95번 딕셔너리 keys() 메소드
+
+```py
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+ice = list(icecream.keys())
+print(ice)
+```
+
+- 좀 헤맸다. list() 로 감싸면 되는걸 굳이 빈 리스트를 만들어서 append 하려고 함 ㅋㅋㅋ
+
+## 96번 딕셔너리 values() 메소드
+
+```py
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+ice = list(icecream.values())
+print(ice)
+```
+
+## 97번 딕셔너리 values() 메소드
+
+```py
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+ice = list(icecream.values())
+print(sum(ice))
+```
+
+## 98번 딕셔너리 update 메서드
+
+```py
+icecream = {'탱크보이': 1200, '폴라포': 1200, '빵빠레': 1800, '월드콘': 1500, '메로나': 1000}
+new_product = {'팥빙수':2700, '아맛나':1000}
+icecream.update(new_product)
+print(icecream)
+```
+
+## 99번 zip과 dict
+
+```py
+keys = ("apple", "pear", "peach")
+vals = (300, 250, 400)
+result = dict(zip(keys, vals))
+print(result)
+```
+
+- zip() 은 여러 개의 순서가 있는 자료형을 쌍으로 묶어주는 함수. 1대 1로 대응되는 튜플 쌍을 만들어준다.
+- dict() 는 딕셔너리를 만들어주는 함수다. 튜플 쌍이 들어 있으면 자동으로 key - value 구조로 바꿔줌. 
+
+- zip 으로 만든 튜플 쌍을 dict로 딕셔너리로 만드는 것. 
+
+## 100번 zip과 dict
+
+```py
+date = ['09/05', '09/06', '09/07', '09/08', '09/09']
+close_price = [10500, 10300, 10100, 10800, 11000]
+close_table = dict(zip(date,close_price))
+print(close_table)
+```
