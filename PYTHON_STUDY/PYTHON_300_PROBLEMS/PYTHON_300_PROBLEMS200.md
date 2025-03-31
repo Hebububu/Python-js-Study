@@ -418,3 +418,85 @@ else:
 
 # 파이썬 반복문
 
+## 131번
+
+```py
+과일 = ["사과", "귤", "수박"]
+for 변수 in 과일:
+    print(변수)
+
+> 사과
+> 귤
+> 수박
+```
+
+## 132번
+
+```py
+과일 = ["사과", "귤", "수박"]
+for 변수 in 과일:
+  print("#####")
+
+> #####
+> #####
+> #####
+```
+
+## 133번
+
+```py
+print("A")
+print("B")
+print("C")
+```
+
+## 134번
+
+```py
+print('출력: A')
+print('출력: B')
+print('출력: C')
+```
+
+## 135번
+
+```py
+변수 = "A"
+b = 변수.lower()
+print("변환:", b)
+변수 = "B"
+b = 변수.lower()
+print("변환:", b)
+변수 = "C"
+b = 변수.lower()
+print("변환:", b)
+```
+
+## 136번
+
+```py
+list = [10, 20 , 30]
+
+for num in list:
+    print(num)
+```
+
+## 137번
+
+```py
+list = [10, 20 , 30]
+
+for num in list:
+    print(num)
+```
+
+## 138번
+
+```py
+list = [10, 20, 30]
+
+for num in list:
+    print(num)
+    print("---------")
+```
+
