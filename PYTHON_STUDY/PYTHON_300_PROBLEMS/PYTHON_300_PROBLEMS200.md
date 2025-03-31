@@ -307,3 +307,114 @@ else:
     print("당신은 알 수 없는 사용자입니다.")
 ```
 
+## 126번
+
+```py
+user = input("우편번호 입력:")
+
+if user.startswith(("010","011","012")):
+    print("강북구")
+elif user.startswith(("013","014,","015")):
+    print("도봉구")
+else:
+    print("노원구")
+```
+
+- startswith() 쓰긴 했는데 if in 으로 작성해도 되는듯.
+
+## 127번 
+
+```py
+user = input("주민등록번호를 입력하세요:")
+
+split_user = user.split("-")
+
+if split_user[1].startswith(("1","3")):
+    print("남정네입니다.")
+elif split_user[1].startswith(("2","4")):
+    print("여자입니다.")
+```
+
+- 답에선 == 연산자 쓰더라. 
+
+## 128번
+
+```py
+user = input("주민등록번호 입력:")
+split_user = user.split("-")
+
+seoul = ("00","01","02","03","04","05","06","07","08")
+
+
+if split_user[1][1:3] in seoul:
+    print("서울입니다.")
+else:
+    print("서울이 아닙니다.")
+```
+
+## 129번
+
+```py
+user = input("주민등록번호 입력: ")
+clean_user = user.replace("-","")
+listed_user = (list(clean_user))
+
+i = 2
+total = 0
+
+for num in listed_user[0:12]:
+    total += int(num) * i
+    i += 1
+    if i == 10:
+        i = 2
+
+check_digit = (11 - (total % 11)) % 10
+if check_digit == int(listed_user[12]):
+    print("유효한 주민등록번호입니다.")
+else:
+    print("유효하지 않은 주민등록번호입니다.") 
+```
+
+- 지금껏 풀었던 문제중에서 제일 어려웠음 (내가 어렵게 푼거긴 함..)
+- 마지막 숫자를 제외하고 순차적으로 i를 곱해서 총 값을 구함. (i가 10이 넘지 않아야 하는걸 잊었다. 첫번째 실수.)
+- 마지막 숫자는 무조건 1자리 숫자니 0~9 사이의 값이 나오게끔 나머지를 나눠야 했음. 
+- ``` if check_digit == int(listed_user[12]): ```
+
+- 답에선 졸라 무식하게 풀었긴 하더라
+
+```py
+num = input("주민등록번호: ")
+계산1 = int(num[0]) * 2 + int(num[1]) * 3 + int(num[2]) * 4 + int(num[3]) * 5 + int(num[4]) * 6 + \
+        int(num[5]) * 7 + int(num[7]) * 8 + int(num[8]) * 9 + int(num[9]) * 2 + int(num[10])* 3 + \
+        int(num[11])* 4 + int(num[12]) * 5
+계산2 = 11 - (계산1 % 11)
+계산3 = str(계산2)
+
+if num[-1] == 계산3[-1]:
+    print("유효한 주민등록번호입니다.")
+else:
+    print("유효하지 않은 주민등록번호입니다.")
+```
+
+- 원본 답 
+
+## 130번
+
+```py
+import requests
+btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+
+변동폭 = float(btc['max_price']) - float(btc['min_price'])
+시가 = float(btc['opening_price'])
+최고가 = float(btc['max_price'])
+
+if (시가 + 변동폭) > 최고가:
+    print('상승장')
+else:
+    print('하락장')
+```
+
+- API로 데이터를 불러오는 첫번째 문제였다. 
+
+# 파이썬 반복문
+
